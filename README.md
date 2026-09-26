@@ -28,7 +28,7 @@ FraudLens evaluates **6,362,620 transactions** totaling **$1.144 Trillion ($1,14
 | :--- | :--- | :--- |
 | **Total Transaction Volume** | **$1,144,392,944,759.77** | 6.36M records spanning CASH_IN, CASH_OUT, DEBIT, PAYMENT, and TRANSFER channels. |
 | **Confirmed Fraud Incidents** | **8,213** | Baseline portfolio fraud incidence of **0.1291%** (1 incident per 775 transactions). |
-| **Fraud-Labeled Exposure** | **$12,056,415,427.84** | Total financial exposure. 100% of confirmed losses occur in `TRANSFER` and `CASH_OUT`. |
+| **Fraud-Labeled Exposure** | **$12,056,415,427.84** | Total financial exposure. 100% of fraud-labeled exposure occurs in TRANSFER and CASH_OUT transactions. |
 | **Average Fraud Ticket Size** | **$1,467,967.30** | Severe skew vs legitimate transaction average ($177,919.74) — **8.25x severity ratio**. |
 | **Origin Account Drainage** | **97.55%** | **8,012 out of 8,213** fraudulent transactions systematically emptied origin accounts to $0.00. |
 | **Legacy Heuristic Audit** | **0.1948% Recall** | Legacy rule (`isFlaggedFraud` > $200k) caught only **16** of 8,213 frauds. Approximately 99.81% of fraud-labeled transactions were missed. |
@@ -48,7 +48,7 @@ The FraudLens Power BI report (`FraudLens_Analytics_Platform.pbix` / `FraudLens.
 5. **Fraud Investigation Workbench**: Forensic case queue of 20,865 high-priority records with dynamic thresholding, account drill-through, and audit trails.
 6. **Machine Learning Model Analysis**: Precision-Recall curves, confusion matrices, ROC curves, feature importance ranking, and threshold sensitivity curves.
 7. **Data Quality, Architecture & Governance**: Data ingestion pipeline health, missing value audits, type validation, star-schema topology, and lineage metadata.
-8. **FraudLens — Executive Risk Dashboard**: Consolidated single-page C-suite dashboard summarizing portfolio KPIs, temporal trends, amount bands, heuristic audit, and validated ground-truth recommendations (*previewed above*).
+8. **FraudLens — Executive Risk Dashboard**: Consolidated single-page C-suite dashboard summarizing portfolio KPIs, temporal trends, amount bands, heuristic audit, and validated ground-truth metrics (*previewed above*).
 
 ---
 
@@ -90,10 +90,12 @@ Due to the extreme class imbalance of financial fraud (**0.1291% base rate**), s
 
 | Model Architecture | Precision | Recall | F1-Score | PR-AUC | ROC-AUC | True Positives (TP) | False Positives (FP) | False Negatives (FN) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Random Forest** | **99.15%** | **99.76%** | **0.9945** | **0.9988** | **0.9998** | **1,639** | 14 | 4 |
-| **XGBoost Classifier** | **99.27%** | **99.82%** | **0.9954** | **0.9987** | **0.9998** | **1,640** | 12 | 3 |
-| **Logistic Regression** | 88.08% | 44.98% | 0.5956 | 0.6475 | 0.9632 | 739 | 100 | 904 |
+| **Random Forest** | **99.88%** | **99.76%** | **0.9982** | **0.9988** | **0.9995** | **1,639** | 2 | 4 |
+| **XGBoost Classifier** | **93.39%** | **99.82%** | **0.9650** | **0.9987** | **0.9995** | **1,640** | 116 | 3 |
+| **Logistic Regression** | 6.37% | 99.63% | 0.1198 | 0.8492 | 0.9991 | 1,637 | 24,050 | 6 |
 | *Rule Heuristic (`isFlaggedFraud`)* | 100.00% | 0.19% | 0.0039 | — | — | 16 | 0 | 8,197 |
+
+> **Operational Threshold Tuning Insight**: Under default threshold ($T=0.50$), supervised models prioritize fraud capture (Recall $\ge 99.6\%$). At tuned decision thresholds ($T=0.90$ for XGBoost; $T=0.60$ for Random Forest), false alerts drop precipitously: XGBoost reaches **99.15% Precision** (slashing false alerts from 116 to 14) with **99.76% Recall**, while Random Forest achieves **100.00% Precision** (0 false alerts) with **99.76% Recall** across the 1.27M test partition.
 
 ### Top Predictive Risk Indicators
 1. **`error_balance_orig`**: Discrepancy between stated origin balance before/after transaction.
@@ -187,7 +189,7 @@ financial_Analytics/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/fraudlens.git
+git clone https://github.com/AyushGupta205/fraudlens.git
 cd fraudlens
 ```
 

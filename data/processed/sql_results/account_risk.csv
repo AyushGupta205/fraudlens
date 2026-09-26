@@ -1,0 +1,5 @@
+risk_tier,account_count,pct_of_all_accounts,fraud_account_count,fraud_rate_within_tier_pct,total_tier_volume
+Critical (76-100),67252,1.06,4334,6.4444,152141708911.61
+High (51-75),605922,9.52,2890,0.477,382387395251.48
+Medium (26-50),1493438,23.47,971,0.065,283685894809.63
+Low (0-25),4196008,65.95,18,0.0004,326177945787.05

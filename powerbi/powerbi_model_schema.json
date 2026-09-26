@@ -1,0 +1,149 @@
+{
+  "name": "FraudLens_PowerBI_Model",
+  "compatibilityLevel": 1550,
+  "description": "FraudLens — Financial Fraud Analytics & Detection Platform (7-Page Complete Star Schema Model)",
+  "tables": [
+    {
+      "name": "DimTransactionType",
+      "source": "DimTransactionType.csv",
+      "columns": ["transaction_type", "channel_category", "is_fraud_eligible", "inherent_risk_rating"],
+      "primaryKey": "transaction_type"
+    },
+    {
+      "name": "DimTime",
+      "source": "DimTime.csv",
+      "columns": ["step", "transaction_hour", "transaction_day", "time_of_day_bracket", "is_business_hours"],
+      "primaryKey": "step"
+    },
+    {
+      "name": "DimRiskTier",
+      "source": "DimRiskTier.csv",
+      "columns": ["risk_category", "score_min", "score_max", "sla_tier", "action_code"],
+      "primaryKey": "risk_category"
+    },
+    {
+      "name": "Summary_Channel_KPIs",
+      "source": "Summary_Channel_KPIs.csv",
+      "columns": [
+        "transaction_type", "total_transactions", "total_volume_usd", "avg_transaction_amount",
+        "fraud_transactions", "fraud_exposure_usd", "fraud_rate_pct", "legitimate_transactions",
+        "legitimate_volume_usd", "avg_fraud_amount", "avg_legitimate_amount", "flagged_fraud_count",
+        "true_positives", "false_positives", "false_negatives", "true_negatives"
+      ]
+    },
+    {
+      "name": "Summary_Hourly_Temporal",
+      "source": "Summary_Hourly_Temporal.csv",
+      "columns": ["step", "transaction_hour", "transaction_day", "transaction_type", "total_transactions", "total_volume_usd", "fraud_transactions", "fraud_exposure_usd"]
+    },
+    {
+      "name": "Summary_Amount_Bands",
+      "source": "Summary_Amount_Bands.csv",
+      "columns": ["amount_band", "total_transactions", "total_volume_usd", "fraud_transactions", "fraud_exposure_usd", "fraud_rate_pct"]
+    },
+    {
+      "name": "Summary_Account_Risk",
+      "source": "Summary_Account_Risk.csv",
+      "columns": ["risk_category", "total_accounts", "fraud_associated_accounts", "account_fraud_rate_pct", "total_volume_usd"]
+    },
+    {
+      "name": "FactFraudInvestigation_Extract",
+      "source": "FactFraudInvestigation_Extract.csv",
+      "columns": [
+        "transaction_id", "step", "transaction_type", "amount", "origin_account", "orig_old_balance",
+        "orig_new_balance", "dest_account", "dest_old_balance", "dest_new_balance", "is_fraud",
+        "is_flagged_fraud", "transaction_hour", "transaction_day", "orig_balance_error",
+        "dest_balance_error", "amount_band", "is_drainage", "risk_score", "risk_category", "investigation_typology"
+      ],
+      "primaryKey": "transaction_id"
+    },
+    {
+      "name": "Summary_ML_Model_Comparison",
+      "source": "Summary_ML_Model_Comparison.csv",
+      "columns": [
+        "Model", "Threshold", "Precision", "Recall", "F1_Score", "ROC_AUC", "PR_AUC",
+        "True_Positives", "False_Positives", "False_Negatives", "True_Negatives",
+        "Tuned_Threshold", "Tuned_Precision", "Tuned_Recall", "Tuned_F1_Score",
+        "Tuned_TP", "Tuned_FP", "Tuned_FN", "Tuned_TN"
+      ]
+    },
+    {
+      "name": "Summary_ML_Confusion_Matrices",
+      "source": "Summary_ML_Confusion_Matrices.csv",
+      "columns": ["Model", "Threshold_Type", "Actual_Class", "Predicted_Class", "Count", "Metric_Type"]
+    },
+    {
+      "name": "Summary_ML_Feature_Importance",
+      "source": "Summary_ML_Feature_Importance.csv",
+      "columns": ["feature", "importance_score", "relative_importance_pct", "rank", "model_type"]
+    },
+    {
+      "name": "Summary_ML_Threshold_Curves",
+      "source": "Summary_ML_Threshold_Curves.csv",
+      "columns": ["threshold", "precision", "recall", "f1_score", "alert_count", "model_type"]
+    },
+    {
+      "name": "Summary_Data_Quality",
+      "source": "Summary_Data_Quality.csv",
+      "columns": ["Quality_Check", "Expected_Value", "Observed_Value", "Status", "Category"]
+    }
+  ],
+  "relationships": [
+    {
+      "fromTable": "Summary_Channel_KPIs",
+      "fromColumn": "transaction_type",
+      "toTable": "DimTransactionType",
+      "toColumn": "transaction_type",
+      "crossFilteringBehavior": "oneDirection",
+      "cardinality": "manyToOne"
+    },
+    {
+      "fromTable": "Summary_Hourly_Temporal",
+      "fromColumn": "step",
+      "toTable": "DimTime",
+      "toColumn": "step",
+      "crossFilteringBehavior": "oneDirection",
+      "cardinality": "manyToOne"
+    },
+    {
+      "fromTable": "Summary_Hourly_Temporal",
+      "fromColumn": "transaction_type",
+      "toTable": "DimTransactionType",
+      "toColumn": "transaction_type",
+      "crossFilteringBehavior": "oneDirection",
+      "cardinality": "manyToOne"
+    },
+    {
+      "fromTable": "Summary_Account_Risk",
+      "fromColumn": "risk_category",
+      "toTable": "DimRiskTier",
+      "toColumn": "risk_category",
+      "crossFilteringBehavior": "oneDirection",
+      "cardinality": "manyToOne"
+    },
+    {
+      "fromTable": "FactFraudInvestigation_Extract",
+      "fromColumn": "step",
+      "toTable": "DimTime",
+      "toColumn": "step",
+      "crossFilteringBehavior": "oneDirection",
+      "cardinality": "manyToOne"
+    },
+    {
+      "fromTable": "FactFraudInvestigation_Extract",
+      "fromColumn": "transaction_type",
+      "toTable": "DimTransactionType",
+      "toColumn": "transaction_type",
+      "crossFilteringBehavior": "oneDirection",
+      "cardinality": "manyToOne"
+    },
+    {
+      "fromTable": "FactFraudInvestigation_Extract",
+      "fromColumn": "risk_category",
+      "toTable": "DimRiskTier",
+      "toColumn": "risk_category",
+      "crossFilteringBehavior": "oneDirection",
+      "cardinality": "manyToOne"
+    }
+  ]
+}

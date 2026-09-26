@@ -1,0 +1,84 @@
+{
+    "best_model": "RandomForest",
+    "comparison": {
+        "LogisticRegression": {
+            "precision": 0.6814,
+            "recall": 0.9945,
+            "f1_score": 0.8087,
+            "roc_auc": 0.9986,
+            "pr_auc": 0.9809,
+            "confusion_matrix": {
+                "true_negatives": 57593,
+                "false_positives": 764,
+                "false_negatives": 9,
+                "true_positives": 1634
+            },
+            "financial_impact": {
+                "investigation_cost_fp": 19100.0,
+                "unmitigated_fraud_loss_fn": 7269665.88,
+                "prevented_fraud_value": 2253426095.0,
+                "net_savings": 2253406995.0
+            }
+        },
+        "RandomForest": {
+            "precision": 0.9994,
+            "recall": 0.9951,
+            "f1_score": 0.9973,
+            "roc_auc": 0.9992,
+            "pr_auc": 0.9977,
+            "confusion_matrix": {
+                "true_negatives": 58356,
+                "false_positives": 1,
+                "false_negatives": 8,
+                "true_positives": 1635
+            },
+            "financial_impact": {
+                "investigation_cost_fp": 25.0,
+                "unmitigated_fraud_loss_fn": 4727001.61,
+                "prevented_fraud_value": 2255968759.27,
+                "net_savings": 2255968734.27
+            }
+        },
+        "XGBoost": {
+            "precision": 0.9951,
+            "recall": 0.9951,
+            "f1_score": 0.9951,
+            "roc_auc": 0.9992,
+            "pr_auc": 0.9971,
+            "confusion_matrix": {
+                "true_negatives": 58349,
+                "false_positives": 8,
+                "false_negatives": 8,
+                "true_positives": 1635
+            },
+            "financial_impact": {
+                "investigation_cost_fp": 200.0,
+                "unmitigated_fraud_loss_fn": 4727001.61,
+                "prevented_fraud_value": 2255968759.27,
+                "net_savings": 2255968559.27
+            }
+        }
+    },
+    "feature_importance": {
+        "orig_balance_error": 0.2706,
+        "orig_drain_ratio": 0.2283,
+        "is_orig_fully_emptied": 0.1365,
+        "oldbalanceOrg": 0.0759,
+        "newbalanceOrig": 0.069,
+        "amount": 0.0504,
+        "log_amount": 0.0495,
+        "is_transfer": 0.0291,
+        "is_dest_merchant": 0.0247,
+        "dest_balance_error": 0.0228,
+        "hour_of_day": 0.0136,
+        "newbalanceDest": 0.0086,
+        "is_orig_zero_initial": 0.0065,
+        "oldbalanceDest": 0.0055,
+        "is_cashout": 0.005,
+        "is_night_hours": 0.0023,
+        "is_dest_zero_initial": 0.0016,
+        "day_of_week": 0.0002,
+        "is_weekend": 0.0,
+        "is_orig_merchant": 0.0
+    }
+}

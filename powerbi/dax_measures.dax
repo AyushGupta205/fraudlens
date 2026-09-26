@@ -1,0 +1,379 @@
+// ============================================================================
+// FraudLens — Complete DAX Measure Definitions (27 Core Measures + Model Evaluators)
+// Reconciles 100% with Phase 4 SQL, Phase 6 Streamlit, and Phase 7 ML Evaluation
+// ============================================================================
+
+// ----------------------------------------------------------------------------
+// Display Folder: 01_Executive_KPIs
+// ----------------------------------------------------------------------------
+
+Total Transactions = 
+SUM(Summary_Channel_KPIs[total_transactions])
+// Format: #,##0
+// Description: Total transacted volume count (6,362,620 transactions)
+
+Total Transacted Volume = 
+SUM(Summary_Channel_KPIs[total_volume_usd])
+// Format: \$#,##0.00
+// Description: Total transacted gross financial volume ($1,144,392,944,759.77)
+
+Confirmed Fraud Incidents = 
+SUM(Summary_Channel_KPIs[fraud_transactions])
+// Format: #,##0
+// Description: Ground-truth fraud incidents identified in dataset (8,213)
+
+Fraud-Labeled Exposure = 
+SUM(Summary_Channel_KPIs[fraud_exposure_usd])
+// Format: \$#,##0.00
+// Description: Cumulative financial volume of fraud-labeled transactions ($12,056,415,427.84)
+
+Overall Fraud Rate = 
+DIVIDE([Confirmed Fraud Incidents], [Total Transactions], 0)
+// Format: 0.0000%
+// Description: Macro fraud incident rate (0.1291%)
+
+Origin Account Drainage Count = 
+8012
+// Format: #,##0
+// Description: Fraud transactions where origin account was drained to zero balance (8,012)
+
+Origin Account Drainage Rate = 
+DIVIDE([Origin Account Drainage Count], [Confirmed Fraud Incidents], 0)
+// Format: 0.00%
+// Description: Origin account drainage rate among fraud incidents (97.55%)
+
+Legitimate Transactions = 
+SUM(Summary_Channel_KPIs[legitimate_transactions])
+// Format: #,##0
+// Description: Legitimate transaction count (6,354,407)
+
+Legitimate Transacted Volume = 
+SUM(Summary_Channel_KPIs[legitimate_volume_usd])
+// Format: \$#,##0.00
+// Description: Legitimate transaction volume ($1,132,336,529,331.93)
+
+
+// ----------------------------------------------------------------------------
+// Display Folder: 02_Fraud_Analytics
+// ----------------------------------------------------------------------------
+
+Average Fraud Amount = 
+DIVIDE([Fraud-Labeled Exposure], [Confirmed Fraud Incidents], 0)
+// Format: \$#,##0.00
+// Description: Average ticket size of fraud incidents ($1,467,967.30)
+
+Average Legitimate Amount = 
+DIVIDE([Legitimate Transacted Volume], [Legitimate Transactions], 0)
+// Format: \$#,##0.00
+// Description: Average ticket size of legitimate transactions ($178,197.04)
+
+Fraud Severity Ratio = 
+DIVIDE([Average Fraud Amount], [Average Legitimate Amount], 0)
+// Format: 0.00
+// Description: Multiplier of fraud ticket size relative to legitimate ticket size (8.24x)
+
+TRANSFER Fraud Rate = 
+CALCULATE(
+    DIVIDE(SUM(Summary_Channel_KPIs[fraud_transactions]), SUM(Summary_Channel_KPIs[total_transactions]), 0),
+    Summary_Channel_KPIs[transaction_type] = "TRANSFER"
+)
+// Format: 0.0000%
+// Description: Channel fraud incidence rate for TRANSFER (0.7688%)
+
+CASHOUT Fraud Rate = 
+CALCULATE(
+    DIVIDE(SUM(Summary_Channel_KPIs[fraud_transactions]), SUM(Summary_Channel_KPIs[total_transactions]), 0),
+    Summary_Channel_KPIs[transaction_type] = "CASH_OUT"
+)
+// Format: 0.0000%
+// Description: Channel fraud incidence rate for CASH_OUT (0.1840%)
+
+High Value Fraud Transaction Share = 
+DIVIDE(5471, [Confirmed Fraud Incidents], 0)
+// Format: 0.00%
+// Description: Share of fraud transactions exceeding $200,000 threshold (66.61%)
+
+
+// ----------------------------------------------------------------------------
+// Display Folder: 03_Financial_Analysis
+// ----------------------------------------------------------------------------
+
+Average Transaction Size = 
+DIVIDE([Total Transacted Volume], [Total Transactions], 0)
+// Format: \$#,##0.00
+// Description: Average transaction size across entire portfolio ($179,861.90)
+
+Fraud Exposure Share Pct = 
+DIVIDE([Fraud-Labeled Exposure], [Total Transacted Volume], 0)
+// Format: 0.0000%
+// Description: Fraud volume as percentage of total portfolio transacted volume (1.0535%)
+
+Daily Fraud Exposure = 
+SUM(Summary_Hourly_Temporal[fraud_exposure_usd])
+// Format: \$#,##0.00
+// Description: Daily fraud exposure grouped by simulation day
+
+Daily Total Volume = 
+SUM(Summary_Hourly_Temporal[total_volume_usd])
+// Format: \$#,##0.00
+// Description: Daily gross transacted volume
+
+Cumulative Fraud Exposure = 
+CALCULATE(
+    [Daily Fraud Exposure],
+    FILTER(
+        ALLSELECTED(DimTime),
+        DimTime[step] <= MAX(DimTime[step])
+    )
+)
+// Format: \$#,##0.00
+// Description: Step-by-step cumulative fraud exposure growth curve
+
+7-Day Rolling Avg Daily Fraud Exposure = 
+AVERAGEX(
+    DATESINPERIOD(
+        DimTime[step],
+        LASTDATE(DimTime[step]),
+        -7,
+        DAY
+    ),
+    [Daily Fraud Exposure]
+)
+// Format: \$#,##0.00
+// Description: 7-day trailing smoothed average of daily fraud exposure
+
+
+// ----------------------------------------------------------------------------
+// Display Folder: 04_Account_Risk
+// ----------------------------------------------------------------------------
+
+Critical Risk Accounts = 
+CALCULATE(SUM(Summary_Account_Risk[total_accounts]), Summary_Account_Risk[risk_category] = "Critical")
+// Format: #,##0
+// Description: Accounts triaged into Critical risk tier (67,252)
+
+High Risk Accounts = 
+CALCULATE(SUM(Summary_Account_Risk[total_accounts]), Summary_Account_Risk[risk_category] = "High")
+// Format: #,##0
+// Description: Accounts triaged into High risk tier (605,922)
+
+Medium Risk Accounts = 
+CALCULATE(SUM(Summary_Account_Risk[total_accounts]), Summary_Account_Risk[risk_category] = "Medium")
+// Format: #,##0
+// Description: Accounts triaged into Medium risk tier (1,493,438)
+
+Low Risk Accounts = 
+CALCULATE(SUM(Summary_Account_Risk[total_accounts]), Summary_Account_Risk[risk_category] = "Low")
+// Format: #,##0
+// Description: Accounts triaged into Low risk tier (4,196,008)
+
+Critical Tier Fraud Rate = 
+CALCULATE(
+    DIVIDE(SUM(Summary_Account_Risk[fraud_associated_accounts]), SUM(Summary_Account_Risk[total_accounts]), 0),
+    Summary_Account_Risk[risk_category] = "Critical"
+)
+// Format: 0.00%
+// Description: Fraud rate within Critical risk tier (6.4444% = 4,334 / 67,252)
+
+Critical Tier Fraud Capture Share = 
+DIVIDE(
+    CALCULATE(SUM(Summary_Account_Risk[fraud_associated_accounts]), Summary_Account_Risk[risk_category] = "Critical"),
+    [Confirmed Fraud Incidents],
+    0
+)
+// Format: 0.00%
+// Description: Percentage of total fraud cases captured in top 1.06% Critical tier (52.77%)
+
+
+// ----------------------------------------------------------------------------
+// Display Folder: 05_Fraud_Investigation
+// ----------------------------------------------------------------------------
+
+Investigation Candidate Count = 
+COUNTROWS(FactFraudInvestigation_Extract)
+// Format: #,##0
+// Description: Total candidate transactions in investigation extract (20,865)
+
+Confirmed Fraud Candidate Count = 
+CALCULATE(
+    COUNTROWS(FactFraudInvestigation_Extract),
+    FactFraudInvestigation_Extract[is_fraud] = 1
+)
+// Format: #,##0
+// Description: Confirmed fraud cases within extract (8,213 = 100% recall)
+
+Candidate Fraud Exposure = 
+CALCULATE(
+    SUM(FactFraudInvestigation_Extract[amount]),
+    FactFraudInvestigation_Extract[is_fraud] = 1
+)
+// Format: \$#,##0.00
+// Description: Total fraud exposure captured in extract ($12,056,415,427.84)
+
+Candidate Average Amount = 
+AVERAGE(FactFraudInvestigation_Extract[amount])
+// Format: \$#,##0.00
+// Description: Mean transacted amount in investigation workbench ($684,310.20)
+
+Candidate Drainage Count = 
+CALCULATE(
+    COUNTROWS(FactFraudInvestigation_Extract),
+    FactFraudInvestigation_Extract[is_drainage] = 1
+)
+// Format: #,##0
+// Description: Origin accounts drained within investigation workbench (8,012)
+
+
+// ----------------------------------------------------------------------------
+// Display Folder: 06_ML_Model_Evaluation
+// ----------------------------------------------------------------------------
+
+Random Forest Precision = 
+0.9988
+// Format: 0.00%
+// Description: Random Forest precision on held-out test set (99.88%)
+
+Random Forest Recall = 
+0.9976
+// Format: 0.00%
+// Description: Random Forest recall on held-out test set (99.76%)
+
+Random Forest F1 = 
+0.9982
+// Format: 0.0000
+// Description: Random Forest F1-score on held-out test set (0.9982)
+
+Random Forest PR-AUC = 
+0.9988
+// Format: 0.0000
+// Description: Random Forest Precision-Recall AUC (0.9988)
+
+Random Forest ROC-AUC = 
+0.9995
+// Format: 0.0000
+// Description: Random Forest ROC-AUC (0.9995)
+
+XGBoost Precision = 
+0.9339
+// Format: 0.00%
+// Description: XGBoost default precision at threshold 0.50 (93.39%)
+
+XGBoost Recall = 
+0.9982
+// Format: 0.00%
+// Description: XGBoost default recall at threshold 0.50 (99.82%)
+
+XGBoost F1 = 
+0.9650
+// Format: 0.0000
+// Description: XGBoost default F1-score (0.9650)
+
+XGBoost PR-AUC = 
+0.9987
+// Format: 0.0000
+// Description: XGBoost Precision-Recall AUC (0.9987)
+
+XGBoost ROC-AUC = 
+0.9995
+// Format: 0.0000
+// Description: XGBoost ROC-AUC (0.9995)
+
+Logistic Regression Precision = 
+0.0637
+// Format: 0.00%
+// Description: Logistic Regression baseline precision (6.37%)
+
+Logistic Regression Recall = 
+0.9963
+// Format: 0.00%
+// Description: Logistic Regression baseline recall (99.63%)
+
+Logistic Regression F1 = 
+0.1198
+// Format: 0.0000
+// Description: Logistic Regression baseline F1-score (0.1198)
+
+Logistic Regression PR-AUC = 
+0.8492
+// Format: 0.0000
+// Description: Logistic Regression PR-AUC (84.92%)
+
+Logistic Regression ROC-AUC = 
+0.9991
+// Format: 0.0000
+// Description: Logistic Regression ROC-AUC (0.9991)
+
+XGBoost Tuned Precision (0.90 Threshold) = 
+0.9915
+// Format: 0.00%
+// Description: XGBoost precision after moving threshold to 0.90 (99.15%)
+
+XGBoost Tuned Recall (0.90 Threshold) = 
+0.9976
+// Format: 0.00%
+// Description: XGBoost recall after moving threshold to 0.90 (99.76%)
+
+XGBoost Tuned False Positives = 
+14
+// Format: #,##0
+// Description: XGBoost false positive alerts at threshold 0.90 (down from 116)
+
+False Positive Reduction Pct = 
+DIVIDE(116 - 14, 116, 0)
+// Format: 0.00%
+// Description: Reduction in false positive alert volume (87.93%)
+
+
+// ----------------------------------------------------------------------------
+// Display Folder: 07_Data_Quality_Governance
+// ----------------------------------------------------------------------------
+
+Missing Value Total = 
+0
+// Format: #,##0
+// Description: Confirmed missing values in cleaned dataset
+
+Duplicate Record Total = 
+0
+// Format: #,##0
+// Description: Confirmed duplicate rows in cleaned dataset
+
+Negative Amount Violations = 
+0
+// Format: #,##0
+// Description: Violations of positive transaction amount constraint
+
+Heuristic Flag Triggered Total = 
+16
+// Format: #,##0
+// Description: Total transactions flagged by legacy isFlaggedFraud heuristic rule
+
+Heuristic Flag TP = 
+16
+// Format: #,##0
+// Description: True positive fraud alerts triggered by heuristic rule
+
+Heuristic Flag FP = 
+0
+// Format: #,##0
+// Description: False positive fraud alerts triggered by heuristic rule
+
+Heuristic Flag FN = 
+8197
+// Format: #,##0
+// Description: Fraud transactions missed by heuristic rule (8,197 / 8,213)
+
+Heuristic Flag TN = 
+6354407
+// Format: #,##0
+// Description: Legitimate transactions correctly cleared by heuristic rule
+
+Heuristic Flag Precision = 
+DIVIDE([Heuristic Flag TP], [Heuristic Flag TP] + [Heuristic Flag FP], 0)
+// Format: 0.00%
+// Description: Legacy rule precision (100.00%)
+
+Heuristic Flag Recall = 
+DIVIDE([Heuristic Flag TP], [Heuristic Flag TP] + [Heuristic Flag FN], 0)
+// Format: 0.0000%
+// Description: Legacy rule recall (0.1948% = 16 / 8,213)

@@ -1,0 +1,2 @@
+TP,FP,FN,TN,total_flagged,total_actual_fraud,precision_pct,recall_pct,f1_score
+16,0,8197,6354407,16,8213,100.0,0.1948,0.003889

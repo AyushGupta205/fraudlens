@@ -1,0 +1,5 @@
+risk_category,score_min,score_max,sla_tier,action_code
+Critical,76,100,Immediate Freeze / Tier 1 SAR,ACT_FREEZE
+High,51,75,Priority Review (< 4 hrs),ACT_REVIEW_PRIORITY
+Medium,26,50,Standard Queue (< 24 hrs),ACT_REVIEW_STANDARD
+Low,0,25,Automated Rule Clearance,ACT_AUTO_PASS

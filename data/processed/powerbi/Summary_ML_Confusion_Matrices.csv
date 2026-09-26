@@ -1,0 +1,13 @@
+Model,Threshold_Type,Actual_Class,Predicted_Class,Count,Metric_Type
+RandomForest,Default (0.50),Fraud (1),Fraud (1),1639,True Positive (TP)
+RandomForest,Default (0.50),Legitimate (0),Fraud (1),2,False Positive (FP)
+RandomForest,Default (0.50),Fraud (1),Legitimate (0),4,False Negative (FN)
+RandomForest,Default (0.50),Legitimate (0),Legitimate (0),1270879,True Negative (TN)
+XGBoost,Default (0.50),Fraud (1),Fraud (1),1640,True Positive (TP)
+XGBoost,Default (0.50),Legitimate (0),Fraud (1),116,False Positive (FP)
+XGBoost,Default (0.50),Fraud (1),Legitimate (0),3,False Negative (FN)
+XGBoost,Default (0.50),Legitimate (0),Legitimate (0),1270765,True Negative (TN)
+LogisticRegression,Default (0.50),Fraud (1),Fraud (1),1637,True Positive (TP)
+LogisticRegression,Default (0.50),Legitimate (0),Fraud (1),24050,False Positive (FP)
+LogisticRegression,Default (0.50),Fraud (1),Legitimate (0),6,False Negative (FN)
+LogisticRegression,Default (0.50),Legitimate (0),Legitimate (0),1246831,True Negative (TN)

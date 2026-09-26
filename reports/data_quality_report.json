@@ -1,0 +1,26 @@
+{
+    "total_records": 1,
+    "status": "PASS",
+    "checks": {
+        "schema_valid": true,
+        "missing_values_count": 0,
+        "missing_per_column": {
+            "step": 0,
+            "type": 0,
+            "amount": 0,
+            "nameOrig": 0,
+            "oldbalanceOrg": 0,
+            "newbalanceOrig": 0,
+            "nameDest": 0,
+            "oldbalanceDest": 0,
+            "newbalanceDest": 0,
+            "isFraud": 0
+        },
+        "duplicate_records": 0,
+        "negative_amounts": 0,
+        "zero_amounts": 0,
+        "negative_balances": 0,
+        "valid_fraud_labels": true
+    },
+    "failures": []
+}

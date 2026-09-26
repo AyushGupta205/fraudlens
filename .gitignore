@@ -1,0 +1,59 @@
+# ==============================================================================
+# FraudLens — Production .gitignore
+# Prevents bulky binaries, local databases, and environment secrets from git
+# while tracking all schemas, code, DAX, tests, reports, and staging tables.
+# ==============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual Environments
+.env
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Operating System & IDE Files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Large Raw & Processed Datasets (>100MB GitHub limit & large binaries)
+data/raw/*.csv
+data/raw/*.zip
+data/raw/*.gz
+data/processed/*.parquet
+data/processed/*.db
+data/processed/*.db-journal
+data/processed/*.sqlite
+data/processed/*.sqlite3
+data/processed/paysim_clean_sample.csv
+
+# Backups & Temporary Working Directories
+backups/
+temp/
+tmp/
+*.tmp
+*.log
+Screenshot*.png

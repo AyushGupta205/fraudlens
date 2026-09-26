@@ -1,0 +1,5 @@
+risk_category,total_accounts,fraud_associated_accounts,account_fraud_rate_pct,total_volume_usd
+Critical,67252,4334,6.4444,152141708911.61
+High,605922,2890,0.477,382387395251.48
+Medium,1493438,971,0.065,283685894809.63
+Low,4196008,18,0.0004,326177945787.05

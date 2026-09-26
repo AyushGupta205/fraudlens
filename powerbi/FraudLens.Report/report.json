@@ -1,0 +1,857 @@
+{
+  "id": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "name": "SharedResources",
+        "type": 2,
+        "items": [
+          {
+            "type": 202,
+            "path": "BaseThemes/Fluent2-CY26SU08.json",
+            "name": "Fluent2-CY26SU08"
+          }
+        ],
+        "disabled": false
+      }
+    }
+  ],
+  "sections": [
+    {
+      "id": 0,
+      "name": "ReportSection_1",
+      "displayName": "Executive Overview",
+      "filters": "[]",
+      "ordinal": 0,
+      "visualContainers": [
+        {
+          "id": 100,
+          "x": 30,
+          "y": 15,
+          "z": 100,
+          "width": 1860,
+          "height": 65,
+          "config": "{\"name\": \"textbox_100\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 15, \"z\": 100, \"width\": 1860, \"height\": 65}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'FraudLens \\u2014 Financial Fraud Analytics & Executive Overview'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"FraudLens \\u2014 Financial Fraud Analytics & Executive Overview | PaySim Synthetic Topology\"}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 101,
+          "x": 30,
+          "y": 90,
+          "z": 101,
+          "width": 285,
+          "height": 105,
+          "config": "{\"name\": \"visual_101\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 90, \"z\": 101, \"width\": 285, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.total_transactions\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"total_transactions\"}, \"Name\": \"Summary_Channel_KPIs.total_transactions\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Total Transactions'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 102,
+          "x": 345,
+          "y": 90,
+          "z": 102,
+          "width": 285,
+          "height": 105,
+          "config": "{\"name\": \"visual_102\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 345, \"y\": 90, \"z\": 102, \"width\": 285, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.total_volume_usd\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"total_volume_usd\"}, \"Name\": \"Summary_Channel_KPIs.total_volume_usd\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Total Transacted Volume'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 103,
+          "x": 660,
+          "y": 90,
+          "z": 103,
+          "width": 285,
+          "height": 105,
+          "config": "{\"name\": \"visual_103\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 660, \"y\": 90, \"z\": 103, \"width\": 285, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.fraud_transactions\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_transactions\"}, \"Name\": \"Summary_Channel_KPIs.fraud_transactions\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Confirmed Fraud Incidents'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 104,
+          "x": 975,
+          "y": 90,
+          "z": 104,
+          "width": 285,
+          "height": 105,
+          "config": "{\"name\": \"visual_104\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 975, \"y\": 90, \"z\": 104, \"width\": 285, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.fraud_exposure_usd\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_exposure_usd\"}, \"Name\": \"Summary_Channel_KPIs.fraud_exposure_usd\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Fraud-Labeled Exposure'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 105,
+          "x": 1290,
+          "y": 90,
+          "z": 105,
+          "width": 285,
+          "height": 105,
+          "config": "{\"name\": \"visual_105\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1290, \"y\": 90, \"z\": 105, \"width\": 285, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.fraud_rate_pct\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_rate_pct\"}, \"Name\": \"Summary_Channel_KPIs.fraud_rate_pct\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Overall Fraud Rate'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 106,
+          "x": 1605,
+          "y": 90,
+          "z": 106,
+          "width": 285,
+          "height": 105,
+          "config": "{\"name\": \"visual_106\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1605, \"y\": 90, \"z\": 106, \"width\": 285, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.is_drainage\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"is_drainage\"}, \"Name\": \"Summary_Channel_KPIs.is_drainage\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Origin Drainage Rate'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 110,
+          "x": 30,
+          "y": 210,
+          "z": 110,
+          "width": 600,
+          "height": 420,
+          "config": "{\"name\": \"visual_110\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 210, \"z\": 110, \"width\": 600, \"height\": 420}}], \"singleVisual\": {\"visualType\": \"columnChart\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.transaction_type\"}, {\"queryRef\": \"Summary_Channel_KPIs.total_volume_usd\"}, {\"queryRef\": \"Summary_Channel_KPIs.fraud_exposure_usd\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"transaction_type\"}, \"Name\": \"Summary_Channel_KPIs.transaction_type\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"total_volume_usd\"}, \"Name\": \"Summary_Channel_KPIs.total_volume_usd\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_exposure_usd\"}, \"Name\": \"Summary_Channel_KPIs.fraud_exposure_usd\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Gross Transaction Volume vs Fraud Exposure by Channel'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 111,
+          "x": 650,
+          "y": 210,
+          "z": 111,
+          "width": 780,
+          "height": 420,
+          "config": "{\"name\": \"visual_111\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 650, \"y\": 210, \"z\": 111, \"width\": 780, \"height\": 420}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Hourly_Temporal.transaction_day\"}, {\"queryRef\": \"Summary_Hourly_Temporal.fraud_exposure_usd\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Hourly_Temporal\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"transaction_day\"}, \"Name\": \"Summary_Hourly_Temporal.transaction_day\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_exposure_usd\"}, \"Name\": \"Summary_Hourly_Temporal.fraud_exposure_usd\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Daily Fraud Exposure Trajectory (31 Days with 7-Day Moving Avg)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 112,
+          "x": 1450,
+          "y": 210,
+          "z": 112,
+          "width": 440,
+          "height": 420,
+          "config": "{\"name\": \"visual_112\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1450, \"y\": 210, \"z\": 112, \"width\": 440, \"height\": 420}}], \"singleVisual\": {\"visualType\": \"barChart\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Amount_Bands.amount_band\"}, {\"queryRef\": \"Summary_Amount_Bands.fraud_exposure_usd\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Amount_Bands\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"amount_band\"}, \"Name\": \"Summary_Amount_Bands.amount_band\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_exposure_usd\"}, \"Name\": \"Summary_Amount_Bands.fraud_exposure_usd\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Fraud Exposure Concentration by Amount Band'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 113,
+          "x": 30,
+          "y": 645,
+          "z": 113,
+          "width": 900,
+          "height": 390,
+          "config": "{\"name\": \"visual_113\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 645, \"z\": 113, \"width\": 900, \"height\": 390}}], \"singleVisual\": {\"visualType\": \"matrix\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.true_positives\"}, {\"queryRef\": \"Summary_Channel_KPIs.false_positives\"}, {\"queryRef\": \"Summary_Channel_KPIs.false_negatives\"}, {\"queryRef\": \"Summary_Channel_KPIs.true_negatives\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"true_positives\"}, \"Name\": \"Summary_Channel_KPIs.true_positives\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"false_positives\"}, \"Name\": \"Summary_Channel_KPIs.false_positives\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"false_negatives\"}, \"Name\": \"Summary_Channel_KPIs.false_negatives\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"true_negatives\"}, \"Name\": \"Summary_Channel_KPIs.true_negatives\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Legacy Heuristic (isFlaggedFraud) Confusion Matrix (TP=16, FP=0, FN=8,197, TN=6,354,407)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 114,
+          "x": 950,
+          "y": 645,
+          "z": 114,
+          "width": 940,
+          "height": 390,
+          "config": "{\"name\": \"textbox_114\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 950, \"y\": 645, \"z\": 114, \"width\": 940, \"height\": 390}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Executive Key Risk Findings & Portfolio Insights'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Channel Concentration: 100% of fraud ($12.06B) is isolated to TRANSFER and CASH_OUT.\\nOrigin Drainage: In 97.55% of fraud cases, origin balances are liquidated to $0.00.\\nRule Failure: Legacy threshold rules missed 99.81% of fraud cases (Recall: 0.1948%).\\nML Superiority: Supervised ML achieves 99.76% recall while cutting false alerts by 87.9%.\"}]}]}}]}}}",
+          "filters": "[]"
+        }
+      ],
+      "config": "{}",
+      "displayOption": 1,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": 1,
+      "name": "ReportSection_2",
+      "displayName": "Fraud Analytics",
+      "filters": "[]",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "id": 200,
+          "x": 30,
+          "y": 15,
+          "z": 200,
+          "width": 1860,
+          "height": 65,
+          "config": "{\"name\": \"textbox_200\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 15, \"z\": 200, \"width\": 1860, \"height\": 65}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'FraudLens \\u2014 Deep-Dive Fraud Pattern & Severity Analytics'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Fraud Severity & Distribution Analytics\"}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 201,
+          "x": 30,
+          "y": 90,
+          "z": 201,
+          "width": 435,
+          "height": 105,
+          "config": "{\"name\": \"visual_201\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 90, \"z\": 201, \"width\": 435, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.fraud_transactions\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_transactions\"}, \"Name\": \"Summary_Channel_KPIs.fraud_transactions\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Confirmed Fraud Incidents'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 202,
+          "x": 495,
+          "y": 90,
+          "z": 202,
+          "width": 435,
+          "height": 105,
+          "config": "{\"name\": \"visual_202\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 495, \"y\": 90, \"z\": 202, \"width\": 435, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.fraud_exposure_usd\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_exposure_usd\"}, \"Name\": \"Summary_Channel_KPIs.fraud_exposure_usd\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Fraud-Labeled Exposure'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 203,
+          "x": 960,
+          "y": 90,
+          "z": 203,
+          "width": 435,
+          "height": 105,
+          "config": "{\"name\": \"visual_203\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 960, \"y\": 90, \"z\": 203, \"width\": 435, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.avg_fraud_amount\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"avg_fraud_amount\"}, \"Name\": \"Summary_Channel_KPIs.avg_fraud_amount\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Mean Fraud Ticket'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 204,
+          "x": 1425,
+          "y": 90,
+          "z": 204,
+          "width": 435,
+          "height": 105,
+          "config": "{\"name\": \"visual_204\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1425, \"y\": 90, \"z\": 204, \"width\": 435, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.avg_legitimate_amount\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"avg_legitimate_amount\"}, \"Name\": \"Summary_Channel_KPIs.avg_legitimate_amount\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Severity Multiplier'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 210,
+          "x": 30,
+          "y": 210,
+          "z": 210,
+          "width": 600,
+          "height": 400,
+          "config": "{\"name\": \"visual_210\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 210, \"z\": 210, \"width\": 600, \"height\": 400}}], \"singleVisual\": {\"visualType\": \"barChart\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.transaction_type\"}, {\"queryRef\": \"Summary_Channel_KPIs.fraud_rate_pct\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"transaction_type\"}, \"Name\": \"Summary_Channel_KPIs.transaction_type\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_rate_pct\"}, \"Name\": \"Summary_Channel_KPIs.fraud_rate_pct\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Channel Fraud Rate (TRANSFER: 0.7688% vs CASH_OUT: 0.1840%)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 211,
+          "x": 650,
+          "y": 210,
+          "z": 211,
+          "width": 780,
+          "height": 400,
+          "config": "{\"name\": \"visual_211\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 650, \"y\": 210, \"z\": 211, \"width\": 780, \"height\": 400}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Hourly_Temporal.transaction_hour\"}, {\"queryRef\": \"Summary_Hourly_Temporal.fraud_transactions\"}, {\"queryRef\": \"Summary_Hourly_Temporal.total_transactions\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Hourly_Temporal\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"transaction_hour\"}, \"Name\": \"Summary_Hourly_Temporal.transaction_hour\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_transactions\"}, \"Name\": \"Summary_Hourly_Temporal.fraud_transactions\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"total_transactions\"}, \"Name\": \"Summary_Hourly_Temporal.total_transactions\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'24-Hour Diurnal Fraud Curve vs Legitimate Activity'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 212,
+          "x": 1450,
+          "y": 210,
+          "z": 212,
+          "width": 440,
+          "height": 400,
+          "config": "{\"name\": \"visual_212\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1450, \"y\": 210, \"z\": 212, \"width\": 440, \"height\": 400}}], \"singleVisual\": {\"visualType\": \"columnChart\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.avg_fraud_amount\"}, {\"queryRef\": \"Summary_Channel_KPIs.avg_legitimate_amount\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"avg_fraud_amount\"}, \"Name\": \"Summary_Channel_KPIs.avg_fraud_amount\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"avg_legitimate_amount\"}, \"Name\": \"Summary_Channel_KPIs.avg_legitimate_amount\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Average Ticket Size Comparison (Fraud vs Legitimate)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 213,
+          "x": 30,
+          "y": 630,
+          "z": 213,
+          "width": 1860,
+          "height": 410,
+          "config": "{\"name\": \"textbox_213\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 630, \"z\": 213, \"width\": 1860, \"height\": 410}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Statistical Significance & Distribution Separation (Cohen's d = 2.1422, p < 1e-15)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Welch's Two-Sample Independent t-Test: t = 92.48, p-value < 1.0e-15.\\nEffect Size: Cohen's d = 2.1422 (Extremely large effect size).\\nConclusion: The origin balance errors and ticket sizes of fraud transactions occupy a completely disparate statistical distribution from legitimate transactions, providing empirical justification for non-linear tree-based machine learning classifiers.\"}]}]}}]}}}",
+          "filters": "[]"
+        }
+      ],
+      "config": "{}",
+      "displayOption": 1,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": 2,
+      "name": "ReportSection_3",
+      "displayName": "Financial & Transaction Analysis",
+      "filters": "[]",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "id": 300,
+          "x": 30,
+          "y": 15,
+          "z": 300,
+          "width": 1860,
+          "height": 65,
+          "config": "{\"name\": \"textbox_300\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 15, \"z\": 300, \"width\": 1860, \"height\": 65}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'FraudLens \\u2014 Financial Volume, Liquidity & Exposure Trajectory'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Portfolio Gross Liquidity and Exposure Analysis\"}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 301,
+          "x": 30,
+          "y": 90,
+          "z": 301,
+          "width": 600,
+          "height": 105,
+          "config": "{\"name\": \"visual_301\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 90, \"z\": 301, \"width\": 600, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.total_volume_usd\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"total_volume_usd\"}, \"Name\": \"Summary_Channel_KPIs.total_volume_usd\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Gross Transacted Volume'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 302,
+          "x": 660,
+          "y": 90,
+          "z": 302,
+          "width": 600,
+          "height": 105,
+          "config": "{\"name\": \"visual_302\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 660, \"y\": 90, \"z\": 302, \"width\": 600, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.fraud_exposure_usd\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_exposure_usd\"}, \"Name\": \"Summary_Channel_KPIs.fraud_exposure_usd\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Fraud-Labeled Exposure'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 303,
+          "x": 1290,
+          "y": 90,
+          "z": 303,
+          "width": 600,
+          "height": 105,
+          "config": "{\"name\": \"visual_303\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1290, \"y\": 90, \"z\": 303, \"width\": 600, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.fraud_rate_pct\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_rate_pct\"}, \"Name\": \"Summary_Channel_KPIs.fraud_rate_pct\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Exposure Share %'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 310,
+          "x": 30,
+          "y": 210,
+          "z": 310,
+          "width": 600,
+          "height": 400,
+          "config": "{\"name\": \"visual_310\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 210, \"z\": 310, \"width\": 600, \"height\": 400}}], \"singleVisual\": {\"visualType\": \"pieChart\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.transaction_type\"}, {\"queryRef\": \"Summary_Channel_KPIs.total_volume_usd\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"transaction_type\"}, \"Name\": \"Summary_Channel_KPIs.transaction_type\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"total_volume_usd\"}, \"Name\": \"Summary_Channel_KPIs.total_volume_usd\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Channel Gross Liquidity Flow Share ($1.144T Total)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 311,
+          "x": 650,
+          "y": 210,
+          "z": 311,
+          "width": 1240,
+          "height": 400,
+          "config": "{\"name\": \"visual_311\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 650, \"y\": 210, \"z\": 311, \"width\": 1240, \"height\": 400}}], \"singleVisual\": {\"visualType\": \"areaChart\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Hourly_Temporal.step\"}, {\"queryRef\": \"Summary_Hourly_Temporal.fraud_exposure_usd\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Hourly_Temporal\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"step\"}, \"Name\": \"Summary_Hourly_Temporal.step\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_exposure_usd\"}, \"Name\": \"Summary_Hourly_Temporal.fraud_exposure_usd\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Step-by-Step Cumulative Fraud Exposure Growth ($0 to $12.06B)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 312,
+          "x": 30,
+          "y": 630,
+          "z": 312,
+          "width": 1100,
+          "height": 410,
+          "config": "{\"name\": \"visual_312\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 630, \"z\": 312, \"width\": 1100, \"height\": 410}}], \"singleVisual\": {\"visualType\": \"lineStackedColumnComboChart\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Hourly_Temporal.transaction_day\"}, {\"queryRef\": \"Summary_Hourly_Temporal.total_volume_usd\"}, {\"queryRef\": \"Summary_Hourly_Temporal.fraud_exposure_usd\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Hourly_Temporal\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"transaction_day\"}, \"Name\": \"Summary_Hourly_Temporal.transaction_day\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"total_volume_usd\"}, \"Name\": \"Summary_Hourly_Temporal.total_volume_usd\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_exposure_usd\"}, \"Name\": \"Summary_Hourly_Temporal.fraud_exposure_usd\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Daily Total Volume ($B) vs Daily Fraud Exposure ($M)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 313,
+          "x": 1150,
+          "y": 630,
+          "z": 313,
+          "width": 740,
+          "height": 410,
+          "config": "{\"name\": \"visual_313\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1150, \"y\": 630, \"z\": 313, \"width\": 740, \"height\": 410}}], \"singleVisual\": {\"visualType\": \"columnChart\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Amount_Bands.amount_band\"}, {\"queryRef\": \"Summary_Amount_Bands.total_volume_usd\"}, {\"queryRef\": \"Summary_Amount_Bands.fraud_exposure_usd\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Amount_Bands\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"amount_band\"}, \"Name\": \"Summary_Amount_Bands.amount_band\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"total_volume_usd\"}, \"Name\": \"Summary_Amount_Bands.total_volume_usd\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_exposure_usd\"}, \"Name\": \"Summary_Amount_Bands.fraud_exposure_usd\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Volume vs Exposure Across Amount Bands'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        }
+      ],
+      "config": "{}",
+      "displayOption": 1,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": 3,
+      "name": "ReportSection_4",
+      "displayName": "Account Risk & Behavioral Prioritization",
+      "filters": "[]",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "id": 400,
+          "x": 30,
+          "y": 15,
+          "z": 400,
+          "width": 1860,
+          "height": 65,
+          "config": "{\"name\": \"textbox_400\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 15, \"z\": 400, \"width\": 1860, \"height\": 65}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'FraudLens \\u2014 Behavioral Account Risk & Portfolio Triage (0\\u2013100 Scale)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"0-100 Multi-Factor Behavioral Account Risk Prioritization\"}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 401,
+          "x": 30,
+          "y": 90,
+          "z": 401,
+          "width": 435,
+          "height": 105,
+          "config": "{\"name\": \"visual_401\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 90, \"z\": 401, \"width\": 435, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Account_Risk.total_accounts\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Account_Risk\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"total_accounts\"}, \"Name\": \"Summary_Account_Risk.total_accounts\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Critical (76-100)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 402,
+          "x": 495,
+          "y": 90,
+          "z": 402,
+          "width": 435,
+          "height": 105,
+          "config": "{\"name\": \"visual_402\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 495, \"y\": 90, \"z\": 402, \"width\": 435, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Account_Risk.total_accounts\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Account_Risk\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"total_accounts\"}, \"Name\": \"Summary_Account_Risk.total_accounts\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'High (51-75)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 403,
+          "x": 960,
+          "y": 90,
+          "z": 403,
+          "width": 435,
+          "height": 105,
+          "config": "{\"name\": \"visual_403\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 960, \"y\": 90, \"z\": 403, \"width\": 435, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Account_Risk.total_accounts\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Account_Risk\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"total_accounts\"}, \"Name\": \"Summary_Account_Risk.total_accounts\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Medium (26-50)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 404,
+          "x": 1425,
+          "y": 90,
+          "z": 404,
+          "width": 435,
+          "height": 105,
+          "config": "{\"name\": \"visual_404\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1425, \"y\": 90, \"z\": 404, \"width\": 435, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Account_Risk.total_accounts\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Account_Risk\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"total_accounts\"}, \"Name\": \"Summary_Account_Risk.total_accounts\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Low (0-25)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 410,
+          "x": 30,
+          "y": 210,
+          "z": 410,
+          "width": 580,
+          "height": 400,
+          "config": "{\"name\": \"visual_410\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 210, \"z\": 410, \"width\": 580, \"height\": 400}}], \"singleVisual\": {\"visualType\": \"pieChart\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Account_Risk.risk_category\"}, {\"queryRef\": \"Summary_Account_Risk.total_accounts\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Account_Risk\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"risk_category\"}, \"Name\": \"Summary_Account_Risk.risk_category\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"total_accounts\"}, \"Name\": \"Summary_Account_Risk.total_accounts\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Account Portfolio Risk Cohort Distribution'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 411,
+          "x": 630,
+          "y": 210,
+          "z": 411,
+          "width": 620,
+          "height": 400,
+          "config": "{\"name\": \"visual_411\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 630, \"y\": 210, \"z\": 411, \"width\": 620, \"height\": 400}}], \"singleVisual\": {\"visualType\": \"columnChart\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Account_Risk.risk_category\"}, {\"queryRef\": \"Summary_Account_Risk.account_fraud_rate_pct\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Account_Risk\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"risk_category\"}, \"Name\": \"Summary_Account_Risk.risk_category\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"account_fraud_rate_pct\"}, \"Name\": \"Summary_Account_Risk.account_fraud_rate_pct\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Empirical Fraud Rate by Risk Tier (Critical: 6.44% vs Low: 0.0004%)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 412,
+          "x": 1270,
+          "y": 210,
+          "z": 412,
+          "width": 620,
+          "height": 400,
+          "config": "{\"name\": \"visual_412\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1270, \"y\": 210, \"z\": 412, \"width\": 620, \"height\": 400}}], \"singleVisual\": {\"visualType\": \"pieChart\", \"projections\": {\"Values\": [{\"queryRef\": \"DimRiskTier.risk_category\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"DimRiskTier\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"risk_category\"}, \"Name\": \"DimRiskTier.risk_category\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Origin Account Complete Drainage Rate (97.55% Drained)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 413,
+          "x": 30,
+          "y": 630,
+          "z": 413,
+          "width": 1860,
+          "height": 410,
+          "config": "{\"name\": \"visual_413\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 630, \"z\": 413, \"width\": 1860, \"height\": 410}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"projections\": {\"Values\": [{\"queryRef\": \"DimRiskTier.risk_category\"}, {\"queryRef\": \"DimRiskTier.score_min\"}, {\"queryRef\": \"DimRiskTier.score_max\"}, {\"queryRef\": \"DimRiskTier.sla_tier\"}, {\"queryRef\": \"DimRiskTier.action_code\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"DimRiskTier\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"risk_category\"}, \"Name\": \"DimRiskTier.risk_category\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"score_min\"}, \"Name\": \"DimRiskTier.score_min\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"score_max\"}, \"Name\": \"DimRiskTier.score_max\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"sla_tier\"}, \"Name\": \"DimRiskTier.sla_tier\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"action_code\"}, \"Name\": \"DimRiskTier.action_code\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Compliance SLA & Operational Triage Matrix'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        }
+      ],
+      "config": "{}",
+      "displayOption": 1,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": 4,
+      "name": "ReportSection_5",
+      "displayName": "Fraud Investigation Workbench",
+      "filters": "[]",
+      "ordinal": 4,
+      "visualContainers": [
+        {
+          "id": 500,
+          "x": 30,
+          "y": 15,
+          "z": 500,
+          "width": 1860,
+          "height": 65,
+          "config": "{\"name\": \"textbox_500\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 15, \"z\": 500, \"width\": 1860, \"height\": 65}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'FraudLens \\u2014 Forensic Fraud Case Investigation Workbench (20,865 Records | 100% Fraud Recall)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Forensic Investigation Console\"}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 501,
+          "x": 30,
+          "y": 90,
+          "z": 501,
+          "width": 250,
+          "height": 110,
+          "config": "{\"name\": \"visual_501\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 90, \"z\": 501, \"width\": 250, \"height\": 110}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"FactFraudInvestigation_Extract.transaction_type\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"FactFraudInvestigation_Extract\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"transaction_type\"}, \"Name\": \"FactFraudInvestigation_Extract.transaction_type\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Filter: Channel'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 502,
+          "x": 295,
+          "y": 90,
+          "z": 502,
+          "width": 250,
+          "height": 110,
+          "config": "{\"name\": \"visual_502\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 295, \"y\": 90, \"z\": 502, \"width\": 250, \"height\": 110}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"FactFraudInvestigation_Extract.is_fraud\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"FactFraudInvestigation_Extract\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"is_fraud\"}, \"Name\": \"FactFraudInvestigation_Extract.is_fraud\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Filter: Fraud Status'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 503,
+          "x": 560,
+          "y": 90,
+          "z": 503,
+          "width": 250,
+          "height": 110,
+          "config": "{\"name\": \"visual_503\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 560, \"y\": 90, \"z\": 503, \"width\": 250, \"height\": 110}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"FactFraudInvestigation_Extract.risk_category\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"FactFraudInvestigation_Extract\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"risk_category\"}, \"Name\": \"FactFraudInvestigation_Extract.risk_category\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Filter: Risk Tier'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 504,
+          "x": 825,
+          "y": 90,
+          "z": 504,
+          "width": 260,
+          "height": 110,
+          "config": "{\"name\": \"visual_504\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 825, \"y\": 90, \"z\": 504, \"width\": 260, \"height\": 110}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"FactFraudInvestigation_Extract.amount\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"FactFraudInvestigation_Extract\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"amount\"}, \"Name\": \"FactFraudInvestigation_Extract.amount\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Filter: Amount ($)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 505,
+          "x": 1100,
+          "y": 90,
+          "z": 505,
+          "width": 240,
+          "height": 110,
+          "config": "{\"name\": \"visual_505\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1100, \"y\": 90, \"z\": 505, \"width\": 240, \"height\": 110}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"FactFraudInvestigation_Extract.risk_score\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"FactFraudInvestigation_Extract\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"risk_score\"}, \"Name\": \"FactFraudInvestigation_Extract.risk_score\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Filter: Risk Score'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 506,
+          "x": 1355,
+          "y": 90,
+          "z": 506,
+          "width": 260,
+          "height": 110,
+          "config": "{\"name\": \"visual_506\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1355, \"y\": 90, \"z\": 506, \"width\": 260, \"height\": 110}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"FactFraudInvestigation_Extract.origin_account\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"FactFraudInvestigation_Extract\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"origin_account\"}, \"Name\": \"FactFraudInvestigation_Extract.origin_account\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Filter: Origin Acct'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 507,
+          "x": 1630,
+          "y": 90,
+          "z": 507,
+          "width": 260,
+          "height": 110,
+          "config": "{\"name\": \"visual_507\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1630, \"y\": 90, \"z\": 507, \"width\": 260, \"height\": 110}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"FactFraudInvestigation_Extract.dest_account\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"FactFraudInvestigation_Extract\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"dest_account\"}, \"Name\": \"FactFraudInvestigation_Extract.dest_account\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Filter: Dest Acct'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 510,
+          "x": 30,
+          "y": 215,
+          "z": 510,
+          "width": 1860,
+          "height": 825,
+          "config": "{\"name\": \"visual_510\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 215, \"z\": 510, \"width\": 1860, \"height\": 825}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"projections\": {\"Values\": [{\"queryRef\": \"FactFraudInvestigation_Extract.transaction_id\"}, {\"queryRef\": \"FactFraudInvestigation_Extract.step\"}, {\"queryRef\": \"FactFraudInvestigation_Extract.transaction_type\"}, {\"queryRef\": \"FactFraudInvestigation_Extract.amount\"}, {\"queryRef\": \"FactFraudInvestigation_Extract.origin_account\"}, {\"queryRef\": \"FactFraudInvestigation_Extract.dest_account\"}, {\"queryRef\": \"FactFraudInvestigation_Extract.orig_old_balance\"}, {\"queryRef\": \"FactFraudInvestigation_Extract.orig_new_balance\"}, {\"queryRef\": \"FactFraudInvestigation_Extract.dest_old_balance\"}, {\"queryRef\": \"FactFraudInvestigation_Extract.dest_new_balance\"}, {\"queryRef\": \"FactFraudInvestigation_Extract.orig_balance_error\"}, {\"queryRef\": \"FactFraudInvestigation_Extract.is_drainage\"}, {\"queryRef\": \"FactFraudInvestigation_Extract.risk_score\"}, {\"queryRef\": \"FactFraudInvestigation_Extract.is_fraud\"}, {\"queryRef\": \"FactFraudInvestigation_Extract.investigation_typology\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"FactFraudInvestigation_Extract\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"transaction_id\"}, \"Name\": \"FactFraudInvestigation_Extract.transaction_id\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"step\"}, \"Name\": \"FactFraudInvestigation_Extract.step\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"transaction_type\"}, \"Name\": \"FactFraudInvestigation_Extract.transaction_type\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"amount\"}, \"Name\": \"FactFraudInvestigation_Extract.amount\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"origin_account\"}, \"Name\": \"FactFraudInvestigation_Extract.origin_account\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"dest_account\"}, \"Name\": \"FactFraudInvestigation_Extract.dest_account\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"orig_old_balance\"}, \"Name\": \"FactFraudInvestigation_Extract.orig_old_balance\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"orig_new_balance\"}, \"Name\": \"FactFraudInvestigation_Extract.orig_new_balance\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"dest_old_balance\"}, \"Name\": \"FactFraudInvestigation_Extract.dest_old_balance\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"dest_new_balance\"}, \"Name\": \"FactFraudInvestigation_Extract.dest_new_balance\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"orig_balance_error\"}, \"Name\": \"FactFraudInvestigation_Extract.orig_balance_error\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"is_drainage\"}, \"Name\": \"FactFraudInvestigation_Extract.is_drainage\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"risk_score\"}, \"Name\": \"FactFraudInvestigation_Extract.risk_score\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"is_fraud\"}, \"Name\": \"FactFraudInvestigation_Extract.is_fraud\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"investigation_typology\"}, \"Name\": \"FactFraudInvestigation_Extract.investigation_typology\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Forensic Case Investigation Detail Grid (20,865 Records)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        }
+      ],
+      "config": "{}",
+      "displayOption": 1,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": 5,
+      "name": "ReportSection_6",
+      "displayName": "Machine Learning Model Analysis",
+      "filters": "[]",
+      "ordinal": 5,
+      "visualContainers": [
+        {
+          "id": 600,
+          "x": 30,
+          "y": 15,
+          "z": 600,
+          "width": 1860,
+          "height": 65,
+          "config": "{\"name\": \"textbox_600\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 15, \"z\": 600, \"width\": 1860, \"height\": 65}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'FraudLens \\u2014 Supervised Machine Learning Evaluation (Held-out Test Set: N = 1,272,524 | Fraud = 1,643)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Held-out test set: N = 1,272,524 transactions | Fraud = 1,643\"}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 610,
+          "x": 30,
+          "y": 90,
+          "z": 610,
+          "width": 1860,
+          "height": 260,
+          "config": "{\"name\": \"visual_610\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 90, \"z\": 610, \"width\": 1860, \"height\": 260}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_ML_Model_Comparison.Model\"}, {\"queryRef\": \"Summary_ML_Model_Comparison.Precision\"}, {\"queryRef\": \"Summary_ML_Model_Comparison.Recall\"}, {\"queryRef\": \"Summary_ML_Model_Comparison.F1_Score\"}, {\"queryRef\": \"Summary_ML_Model_Comparison.PR_AUC\"}, {\"queryRef\": \"Summary_ML_Model_Comparison.ROC_AUC\"}, {\"queryRef\": \"Summary_ML_Model_Comparison.True_Positives\"}, {\"queryRef\": \"Summary_ML_Model_Comparison.False_Positives\"}, {\"queryRef\": \"Summary_ML_Model_Comparison.False_Negatives\"}, {\"queryRef\": \"Summary_ML_Model_Comparison.True_Negatives\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_ML_Model_Comparison\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"Model\"}, \"Name\": \"Summary_ML_Model_Comparison.Model\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"Precision\"}, \"Name\": \"Summary_ML_Model_Comparison.Precision\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"Recall\"}, \"Name\": \"Summary_ML_Model_Comparison.Recall\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"F1_Score\"}, \"Name\": \"Summary_ML_Model_Comparison.F1_Score\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"PR_AUC\"}, \"Name\": \"Summary_ML_Model_Comparison.PR_AUC\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"ROC_AUC\"}, \"Name\": \"Summary_ML_Model_Comparison.ROC_AUC\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"True_Positives\"}, \"Name\": \"Summary_ML_Model_Comparison.True_Positives\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"False_Positives\"}, \"Name\": \"Summary_ML_Model_Comparison.False_Positives\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"False_Negatives\"}, \"Name\": \"Summary_ML_Model_Comparison.False_Negatives\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"True_Negatives\"}, \"Name\": \"Summary_ML_Model_Comparison.True_Negatives\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Supervised Model Performance Comparison on Test Partition'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 611,
+          "x": 30,
+          "y": 365,
+          "z": 611,
+          "width": 880,
+          "height": 675,
+          "config": "{\"name\": \"visual_611\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 365, \"z\": 611, \"width\": 880, \"height\": 675}}], \"singleVisual\": {\"visualType\": \"barChart\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_ML_Feature_Importance.feature\"}, {\"queryRef\": \"Summary_ML_Feature_Importance.relative_importance_pct\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_ML_Feature_Importance\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"feature\"}, \"Name\": \"Summary_ML_Feature_Importance.feature\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"relative_importance_pct\"}, \"Name\": \"Summary_ML_Feature_Importance.relative_importance_pct\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'XGBoost Feature Importance Ranking (newbalanceOrig, orig_balance_error, amount)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 612,
+          "x": 930,
+          "y": 365,
+          "z": 612,
+          "width": 960,
+          "height": 330,
+          "config": "{\"name\": \"visual_612\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 930, \"y\": 365, \"z\": 612, \"width\": 960, \"height\": 330}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_ML_Threshold_Curves.threshold\"}, {\"queryRef\": \"Summary_ML_Threshold_Curves.precision\"}, {\"queryRef\": \"Summary_ML_Threshold_Curves.recall\"}, {\"queryRef\": \"Summary_ML_Threshold_Curves.f1_score\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_ML_Threshold_Curves\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"threshold\"}, \"Name\": \"Summary_ML_Threshold_Curves.threshold\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"precision\"}, \"Name\": \"Summary_ML_Threshold_Curves.precision\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"recall\"}, \"Name\": \"Summary_ML_Threshold_Curves.recall\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"f1_score\"}, \"Name\": \"Summary_ML_Threshold_Curves.f1_score\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Threshold Tuning Tradeoff: Precision vs Recall (Tuned 0.90 cuts false alerts by 87.9%)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 613,
+          "x": 930,
+          "y": 710,
+          "z": 613,
+          "width": 960,
+          "height": 330,
+          "config": "{\"name\": \"visual_613\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 930, \"y\": 710, \"z\": 613, \"width\": 960, \"height\": 330}}], \"singleVisual\": {\"visualType\": \"matrix\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_ML_Confusion_Matrices.Model\"}, {\"queryRef\": \"Summary_ML_Confusion_Matrices.Actual_Class\"}, {\"queryRef\": \"Summary_ML_Confusion_Matrices.Predicted_Class\"}, {\"queryRef\": \"Summary_ML_Confusion_Matrices.Count\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_ML_Confusion_Matrices\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"Model\"}, \"Name\": \"Summary_ML_Confusion_Matrices.Model\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"Actual_Class\"}, \"Name\": \"Summary_ML_Confusion_Matrices.Actual_Class\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"Predicted_Class\"}, \"Name\": \"Summary_ML_Confusion_Matrices.Predicted_Class\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"Count\"}, \"Name\": \"Summary_ML_Confusion_Matrices.Count\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Model Confusion Matrices (Default vs Tuned Threshold States)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        }
+      ],
+      "config": "{}",
+      "displayOption": 1,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": 6,
+      "name": "ReportSection_7",
+      "displayName": "Data Quality, Architecture & Governance",
+      "filters": "[]",
+      "ordinal": 6,
+      "visualContainers": [
+        {
+          "id": 700,
+          "x": 30,
+          "y": 15,
+          "z": 700,
+          "width": 1860,
+          "height": 65,
+          "config": "{\"name\": \"textbox_700\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 15, \"z\": 700, \"width\": 1860, \"height\": 65}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'FraudLens \\u2014 Data Engineering Quality, Architecture & Compliance Governance'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Data Engineering Quality, Pipeline Architecture & Platform Governance\"}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 710,
+          "x": 30,
+          "y": 90,
+          "z": 710,
+          "width": 900,
+          "height": 460,
+          "config": "{\"name\": \"visual_710\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 90, \"z\": 710, \"width\": 900, \"height\": 460}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Data_Quality.Quality_Check\"}, {\"queryRef\": \"Summary_Data_Quality.Expected_Value\"}, {\"queryRef\": \"Summary_Data_Quality.Observed_Value\"}, {\"queryRef\": \"Summary_Data_Quality.Status\"}, {\"queryRef\": \"Summary_Data_Quality.Category\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Data_Quality\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"Quality_Check\"}, \"Name\": \"Summary_Data_Quality.Quality_Check\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"Expected_Value\"}, \"Name\": \"Summary_Data_Quality.Expected_Value\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"Observed_Value\"}, \"Name\": \"Summary_Data_Quality.Observed_Value\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"Status\"}, \"Name\": \"Summary_Data_Quality.Status\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"Category\"}, \"Name\": \"Summary_Data_Quality.Category\"}]}, \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Automated Data Quality Audit Matrix (0 Missing, 0 Duplicates, 0 Negative Amounts)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 711,
+          "x": 950,
+          "y": 90,
+          "z": 711,
+          "width": 940,
+          "height": 460,
+          "config": "{\"name\": \"textbox_711\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 950, \"y\": 90, \"z\": 711, \"width\": 940, \"height\": 460}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Legacy Rule Heuristic Performance Audit (isFlaggedFraud: TP=16, FP=0, FN=8,197, Recall=0.1948%)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Rule Condition: Transaction Type = TRANSFER AND Amount > $200,000.\\nTrue Positives: 16 (Precision: 100.00%).\\nFalse Negatives: 8,197 (Recall: 0.1948%).\\nTotal Legitimate Correctly Cleared: 6,354,407 (Specificity: 100.00%).\\nOperational Audit Finding: While the rule had 0 false alarms, it missed 99.81% of fraudulent extractions, demonstrating why deterministic rule thresholds are critically flawed without adaptive ML.\"}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 712,
+          "x": 30,
+          "y": 565,
+          "z": 712,
+          "width": 900,
+          "height": 475,
+          "config": "{\"name\": \"textbox_712\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 565, \"z\": 712, \"width\": 900, \"height\": 475}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'FraudLens End-to-End Enterprise Platform Pipeline Architecture'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"1. Ingestion: 6,362,620 raw PaySim mobile-money transactions.\\n2. Data Engineering & Cleaning: 0 nulls, 0 duplicates, engineered balance error & drainage flags.\\n3. Statistical EDA: Cohen's d = 2.1422 (p < 1e-15), 100% channel exclusivity to TRANSFER & CASH_OUT.\\n4. SQL Layer: SQLite data warehouse with 10 B-Tree indices and 0-100 behavioral risk score.\\n5. Staging Layer: 13 star-schema tables and 20,865-record forensic extract.\\n6. Machine Learning: Random Forest (PR-AUC 0.9988) & XGBoost (PR-AUC 0.9987).\\n7. Delivery: Power BI Enterprise Dashboard & Interactive Streamlit Workbench.\"}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 713,
+          "x": 950,
+          "y": 565,
+          "z": 713,
+          "width": 940,
+          "height": 475,
+          "config": "{\"name\": \"textbox_713\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 950, \"y\": 565, \"z\": 713, \"width\": 940, \"height\": 475}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Platform Governance, Compliance Standards & Analytical Disclaimers'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"1. Synthetic Topology: Built on the verified PaySim agent-based mobile-money dataset. Does not represent proprietary live banking or Indian regulatory rails.\\n2. Exposure vs. Net Loss: Metric represents fraud-labeled exposure ($12.06B); actual realized loss depends on recovery, chargebacks, and legal seizure.\\n3. Triage Queuing: Behavioral risk scores (0-100) are designed for compliance investigator prioritization, not legal proof of fraud.\\n4. Feature Attribution: Feature gain scores indicate mathematical predictive association in tree models, not human causality.\"}]}]}}]}}}",
+          "filters": "[]"
+        }
+      ],
+      "config": "{}",
+      "displayOption": 1,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": 7,
+      "name": "ReportSection_8",
+      "displayName": "FraudLens \u2014 Executive Risk Dashboard",
+      "filters": "[]",
+      "ordinal": 7,
+      "visualContainers": [
+        {
+          "id": 800,
+          "x": 30,
+          "y": 15,
+          "z": 800,
+          "width": 1200,
+          "height": 65,
+          "config": "{\"name\": \"textbox_800\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 15, \"z\": 800, \"width\": 1200, \"height\": 65}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'FraudLens'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"FraudLens \\u2014 Financial Fraud Analytics & Risk Intelligence\\nPaySim Transaction Monitoring | Executive Risk Dashboard\"}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 801,
+          "x": 1240,
+          "y": 15,
+          "z": 801,
+          "width": 200,
+          "height": 65,
+          "config": "{\"name\": \"visual_801\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1240, \"y\": 15, \"z\": 801, \"width\": 200, \"height\": 65}}], \"singleVisual\": {\"visualType\": \"slicer\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Channel Filter'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"projections\": {\"Values\": [{\"queryRef\": \"DimTransactionType.transaction_type\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"DimTransactionType\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"transaction_type\"}, \"Name\": \"DimTransactionType.transaction_type\"}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 802,
+          "x": 1450,
+          "y": 15,
+          "z": 802,
+          "width": 210,
+          "height": 65,
+          "config": "{\"name\": \"visual_802\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1450, \"y\": 15, \"z\": 802, \"width\": 210, \"height\": 65}}], \"singleVisual\": {\"visualType\": \"slicer\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Fraud Status'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"projections\": {\"Values\": [{\"queryRef\": \"FactFraudInvestigation_Extract.is_fraud\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"FactFraudInvestigation_Extract\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"is_fraud\"}, \"Name\": \"FactFraudInvestigation_Extract.is_fraud\"}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 803,
+          "x": 1670,
+          "y": 15,
+          "z": 803,
+          "width": 220,
+          "height": 65,
+          "config": "{\"name\": \"visual_803\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1670, \"y\": 15, \"z\": 803, \"width\": 220, \"height\": 65}}], \"singleVisual\": {\"visualType\": \"slicer\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Risk Tier'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"projections\": {\"Values\": [{\"queryRef\": \"DimRiskTier.risk_category\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"DimRiskTier\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"risk_category\"}, \"Name\": \"DimRiskTier.risk_category\"}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 810,
+          "x": 30,
+          "y": 90,
+          "z": 810,
+          "width": 285,
+          "height": 105,
+          "config": "{\"name\": \"visual_810\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 90, \"z\": 810, \"width\": 285, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Transactions'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.total_transactions\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"total_transactions\"}, \"Name\": \"Summary_Channel_KPIs.total_transactions\"}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 811,
+          "x": 345,
+          "y": 90,
+          "z": 811,
+          "width": 285,
+          "height": 105,
+          "config": "{\"name\": \"visual_811\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 345, \"y\": 90, \"z\": 811, \"width\": 285, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Transaction Volume'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.total_volume_usd\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"total_volume_usd\"}, \"Name\": \"Summary_Channel_KPIs.total_volume_usd\"}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 812,
+          "x": 660,
+          "y": 90,
+          "z": 812,
+          "width": 285,
+          "height": 105,
+          "config": "{\"name\": \"visual_812\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 660, \"y\": 90, \"z\": 812, \"width\": 285, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Fraud Transactions'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.fraud_transactions\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_transactions\"}, \"Name\": \"Summary_Channel_KPIs.fraud_transactions\"}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 813,
+          "x": 975,
+          "y": 90,
+          "z": 813,
+          "width": 285,
+          "height": 105,
+          "config": "{\"name\": \"visual_813\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 975, \"y\": 90, \"z\": 813, \"width\": 285, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Fraud Exposure'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.fraud_exposure_usd\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_exposure_usd\"}, \"Name\": \"Summary_Channel_KPIs.fraud_exposure_usd\"}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 814,
+          "x": 1290,
+          "y": 90,
+          "z": 814,
+          "width": 285,
+          "height": 105,
+          "config": "{\"name\": \"visual_814\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1290, \"y\": 90, \"z\": 814, \"width\": 285, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Fraud Rate'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.fraud_rate_pct\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_rate_pct\"}, \"Name\": \"Summary_Channel_KPIs.fraud_rate_pct\"}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 815,
+          "x": 1605,
+          "y": 90,
+          "z": 815,
+          "width": 285,
+          "height": 105,
+          "config": "{\"name\": \"visual_815\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1605, \"y\": 90, \"z\": 815, \"width\": 285, \"height\": 105}}], \"singleVisual\": {\"visualType\": \"card\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Origin Drainage'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.is_drainage\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"is_drainage\"}, \"Name\": \"Summary_Channel_KPIs.is_drainage\"}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 820,
+          "x": 30,
+          "y": 210,
+          "z": 820,
+          "width": 450,
+          "height": 410,
+          "config": "{\"name\": \"visual_820\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 210, \"z\": 820, \"width\": 450, \"height\": 410}}], \"singleVisual\": {\"visualType\": \"columnChart\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Gross Transaction Volume vs Fraud Exposure by Channel'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Channel_KPIs.transaction_type\"}, {\"queryRef\": \"Summary_Channel_KPIs.total_volume_usd\"}, {\"queryRef\": \"Summary_Channel_KPIs.fraud_exposure_usd\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Channel_KPIs\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"transaction_type\"}, \"Name\": \"Summary_Channel_KPIs.transaction_type\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"total_volume_usd\"}, \"Name\": \"Summary_Channel_KPIs.total_volume_usd\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_exposure_usd\"}, \"Name\": \"Summary_Channel_KPIs.fraud_exposure_usd\"}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 821,
+          "x": 500,
+          "y": 210,
+          "z": 821,
+          "width": 460,
+          "height": 410,
+          "config": "{\"name\": \"visual_821\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 500, \"y\": 210, \"z\": 821, \"width\": 460, \"height\": 410}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Daily Fraud Exposure & 7-Day Trailing Average (31 Days)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Hourly_Temporal.transaction_day\"}, {\"queryRef\": \"Summary_Hourly_Temporal.fraud_exposure_usd\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Hourly_Temporal\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"transaction_day\"}, \"Name\": \"Summary_Hourly_Temporal.transaction_day\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_exposure_usd\"}, \"Name\": \"Summary_Hourly_Temporal.fraud_exposure_usd\"}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 822,
+          "x": 980,
+          "y": 210,
+          "z": 822,
+          "width": 450,
+          "height": 410,
+          "config": "{\"name\": \"visual_822\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 980, \"y\": 210, \"z\": 822, \"width\": 450, \"height\": 410}}], \"singleVisual\": {\"visualType\": \"barChart\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Fraud Exposure by Amount Band (<10k to 5M+)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Amount_Bands.amount_band\"}, {\"queryRef\": \"Summary_Amount_Bands.fraud_exposure_usd\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Amount_Bands\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"amount_band\"}, \"Name\": \"Summary_Amount_Bands.amount_band\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"fraud_exposure_usd\"}, \"Name\": \"Summary_Amount_Bands.fraud_exposure_usd\"}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 823,
+          "x": 1450,
+          "y": 210,
+          "z": 823,
+          "width": 440,
+          "height": 410,
+          "config": "{\"name\": \"visual_823\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1450, \"y\": 210, \"z\": 823, \"width\": 440, \"height\": 410}}], \"singleVisual\": {\"visualType\": \"pieChart\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Account Risk Tier Distribution (Critical: 67,252 | High: 605,922 | Med: 1.49M | Low: 4.20M)'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI Semibold'\"}}}}}], \"visualContainerHeader\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"projections\": {\"Values\": [{\"queryRef\": \"Summary_Account_Risk.risk_category\"}, {\"queryRef\": \"Summary_Account_Risk.total_accounts\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Summary_Account_Risk\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"risk_category\"}, \"Name\": \"Summary_Account_Risk.risk_category\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"total_accounts\"}, \"Name\": \"Summary_Account_Risk.total_accounts\"}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 830,
+          "x": 30,
+          "y": 635,
+          "z": 830,
+          "width": 860,
+          "height": 410,
+          "config": "{\"name\": \"textbox_830\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 30, \"y\": 635, \"z\": 830, \"width\": 860, \"height\": 410}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Legacy Heuristic (isFlaggedFraud) Audit'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Legacy isFlaggedFraud heuristic detected 16 of 8,213 fraud-labeled transactions.\\n\\n\\u2022 True Positives (TP): 16\\n\\u2022 False Positives (FP): 0\\n\\u2022 False Negatives (FN): 8,197 (Missed Fraud)\\n\\u2022 True Negatives (TN): 6,354,407\\n\\nHeuristic Precision: 100.00% | Heuristic Recall: 0.1948%\\nFinding: 99.81% of fraud slipped past the deterministic rule threshold, demonstrating that static rules fail to detect modern payment fraud.\"}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "id": 831,
+          "x": 910,
+          "y": 635,
+          "z": 831,
+          "width": 980,
+          "height": 410,
+          "config": "{\"name\": \"textbox_831\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 910, \"y\": 635, \"z\": 831, \"width\": 980, \"height\": 410}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Executive Insight Panel'\"}}}, \"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}], \"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Executive Key Findings & Statistical Validation:\\n\\n\\u2022 Fraud Exposure: $12.06B (concentrated 100% in TRANSFER and CASH_OUT)\\n\\u2022 Fraud Rate: 0.1291% (8,213 of 6,362,620 transactions)\\n\\u2022 Origin Drainage: 97.55% (8,012 / 8,213 origin accounts completely drained to $0.00)\\n\\u2022 Cohen's d: 2.1422 (Extremely large statistical effect size)\\n\\u2022 Statistical Significance: p < 10^-15 (Welch's t-test confirms disparate distribution)\\n\\nRisk Mitigation Recommendation: Transition compliance operations from static rule thresholds to supervised non-linear tree-based ML triage, capturing 99.76% of fraud cases while cutting false alert volumes by 87.9%.\"}]}]}}]}}}",
+          "filters": "[]"
+        }
+      ],
+      "config": "{}",
+      "displayOption": 1,
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "config": "{\"version\": \"5.76\", \"themeCollection\": {\"baseTheme\": {\"name\": \"Fluent2-CY26SU08\", \"version\": {\"visual\": \"2.12.0\", \"report\": \"3.4.0\", \"page\": \"2.3.1\"}, \"type\": 2}}, \"activeSectionIndex\": 0, \"defaultDrillFilterOtherVisuals\": true, \"settings\": {\"useNewFilterPaneExperience\": true, \"allowChangeFilterTypes\": true, \"useStylableVisualContainerHeader\": true, \"queryLimitOption\": 6, \"useEnhancedTooltips\": true, \"exportDataMode\": 1, \"useDefaultAggregateDisplayName\": true}}",
+  "layoutOptimization": 0
+}

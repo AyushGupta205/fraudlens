@@ -1,0 +1,11 @@
+Quality_Check,Expected_Value,Observed_Value,Status,Category
+Total Raw Transactions,"6,362,620","6,362,620",PASS (100% Complete),Completeness
+Missing / Null Values,0,0,PASS (Zero Missing),Integrity
+Exact Duplicate Rows,0,0,PASS (Zero Duplicates),Uniqueness
+Negative Transaction Amounts,0,0,PASS (Non-negative),Validity
+Invalid isFraud Values,0 (Binary 0/1),0,PASS (Binary 0/1),Validity
+Negative Initial Balances,0,0,PASS (Non-negative),Validity
+Heuristic Rule (isFlaggedFraud) TP,16,16,PASS (100% Precision),Rule Performance
+Heuristic Rule (isFlaggedFraud) FP,0,0,PASS (Zero False Positives),Rule Performance
+Heuristic Rule (isFlaggedFraud) FN,"8,197","8,197",PASS (0.1948% Recall),Rule Performance
+Heuristic Rule (isFlaggedFraud) TN,"6,354,407","6,354,407",PASS,Rule Performance

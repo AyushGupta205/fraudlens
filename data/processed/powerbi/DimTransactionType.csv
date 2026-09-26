@@ -1,0 +1,6 @@
+transaction_type,channel_category,is_fraud_eligible,inherent_risk_rating
+CASH_IN,Inbound Liquidity Channel,0,Low
+CASH_OUT,High Exposure Channel,1,High
+DEBIT,Direct Debit Channel,0,Low
+PAYMENT,Low Risk Consumer Channel,0,Low
+TRANSFER,High Exposure Channel,1,Critical
